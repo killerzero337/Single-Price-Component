@@ -1,0 +1,200 @@
+/*Fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&display=swap');
+/*font-family: 'Karla', sans-serif; 400 o 700*/
+
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Cyan-Bringht: hsla(179, 47.2%, 51.8%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --white: hsl(0, 0%, 100%);
+
+    /*### Neutral*/
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-content: center center;
+    background-color: var(--Light-Gray);
+    font-size: 1em;
+    font-family: 'Karla', sans-serif;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    max-width: 635px;
+    text-align: justify;
+    /*border: solid 3px black;*/
+
+}
+
+.tarjeta .blanco {
+    /*border: solid 1px red;*/
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--white);
+    height: auto;
+    padding: 4%;
+}
+
+.blanco h3,
+.parrafoAzul {
+    color: var(--Cyan);
+    padding: 0px 0px 10px 0px;
+    font-size: 1.3em;
+}
+
+.blanco .parrafoGris {
+    color: var(--Light-Gray);
+    padding: 5px 0px 5px;
+}
+
+/*Tarjeta de arriba*/
+.blanco .parrafoVerde {
+    color: var(--Bright-Yellow);
+    padding: 5px 0px 5px;
+}
+
+.blanco h3,
+.parrafoAzul {
+    color: var(--Cyan);
+    padding: 0px 0px 10px 0px;
+    font-size: 1.3em;
+}
+
+
+.blanco .parrafoVerde {
+    color: var(--Bright-Yellow);
+    padding: 5px 0px 5px;
+}
+
+.blanco .parrafoAzul,
+.parrafoVerde {
+    font-weight: 700;
+}
+
+.blanco .parrafoGris {
+    color: var(--Light-Gray);
+
+}
+
+/*tarjetas conjunta de abajo*/
+.tarjeta .publicidad {
+    display: flex;
+    flex-direction: row;
+    /*realmente por defecto es en row pero es para probar el reverse y demas*/
+}
+
+
+/*Tarjeta izquierda*/
+.publicidad .azul {
+    color: var(--white);
+    /*border: solid 1px blue;*/
+    background-color: var(--Cyan);
+    width: 100%;
+    border-radius: 0px 0px 0px 5px;
+    padding: 30px;
+
+}
+
+
+.publicidad .azul .titulo {
+    font-weight: 700;
+}
+
+
+.azul .precio {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.azul .precio span {
+    font-size: 0.5em;
+    font-weight: lighter;
+    text-align: center;
+    align-content: center;
+}
+
+
+.publicidad .azul .boton {
+    display: flex;
+    place-content: center center;
+    flex-direction: column;
+    margin: 10% 0% 0% 0%;
+    text-align: center;
+    background-color: var(--Bright-Yellow);
+    border-radius: 5px;
+    min-height: 30%;
+    max-width: 100%;
+    font-weight: 700;
+}
+
+
+
+
+/*Tarjeta derecha*/
+.publicidad .celeste {
+    /* border: solid 1px yellow;*/
+    background-color: var(--Cyan-Bringht);
+    width: 100%;
+    color: var(--white);
+    padding: 1em;
+    border-radius: 0px 0px 5px;
+    padding: 30px;
+}
+
+
+
+.publicidad .celeste .titulo {
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.publicidad .celeste .presentacion {
+    color: var(--Light-Gray);
+    font-weight: 400;
+    font-size: 0.9em;
+    text-align: left;
+    line-height: 20px;
+}
+
+@media screen and (width <=650px) {
+
+    .tarjeta {
+        width: 350px;
+        margin: 50px;
+    }
+
+    .tarjeta .blanco {
+        /*border: solid 1px red;*/
+        background-color: var(--white);
+        height: auto;
+        padding: 5%;
+        text-align: left;
+    }
+
+    .tarjeta .publicidad {
+        flex-direction: column;
+    }
+
+    .publicidad .azul {
+        border-radius: 0px;
+    }
+
+    .publicidad .celeste {
+        /* border: solid 1px yellow;*/
+        border-radius: 0px 0px 5px 5px;
+    }
+}
