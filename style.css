@@ -124,6 +124,9 @@ body {
     font-size: 0.5em;
     font-weight: lighter;
     text-align: center;
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
     align-content: center;
 }
 
@@ -173,8 +176,10 @@ body {
 @media screen and (width <=650px) {
 
     .tarjeta {
+        height: auto;
         width: 350px;
-        margin: 50px;
+        margin: 100px;
+
     }
 
     .tarjeta .blanco {
